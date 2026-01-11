@@ -54,7 +54,7 @@ To verify that this theory works, I considered three things:
 1. I use the **PUT** endpoint, which allows changing the title of an existing note.  
    This avoids creating a new note each time and allows iterative guesses such as `"flag,A"` or `"flag,0"`.
 2. AES encryption works on a block size of **16 bytes**.  
-   For example, encrypting `'AAAAA'` gives 16 bytes, while encrypting 17 `A`s gives 32 bytes. The extra bytes come from padding to fill AES’s 16-byte blocks.
+   For example, encrypting `'AAAAA'` gives 16 bytes, while encrypting 17 `'A'`s gives 32 bytes. The extra bytes come from padding to fill AES’s 16-byte blocks.
    In this challenge, the same idea applies but on a base of **4**, meaning the compression output must land on the correct padding boundary before encryption.  
    If compression produces 4 bytes or less, it aligns differently than if it produces 5 bytes, in which case AES padding adds 3 bytes.  
 4. When guessing the ID, I only use hexadecimal characters: `0–9` and `A–F`.
