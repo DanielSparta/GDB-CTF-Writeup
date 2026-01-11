@@ -95,7 +95,7 @@ The script successfully recovered the ID of that note, allowing me to read its c
 ```
 import requests
 URL = "" # replace with ctf uri
-MY_NOTE_ID = "AAAAAAAAAA" # replace with a node ID that you will need to create at the endpoint "POST /note"
+MY_NOTE_ID = "AAAAAAAAAA" # replace with a note ID that you will need to create at the endpoint "POST /note"
 found_id = "" 
 
 for i in range(10): # Guessing a 10-char hex ID
