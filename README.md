@@ -2,6 +2,9 @@
 Solution to !BS GDB CTF
 https://websec.co.il/nobs
 
+<img width="1013" height="584" alt="image" src="https://github.com/user-attachments/assets/763560c0-b8c8-49d3-a25f-1f308fef5ac5" />
+
+
 # Compression Side-Channel Attack Writeup
 
 ## Overview
