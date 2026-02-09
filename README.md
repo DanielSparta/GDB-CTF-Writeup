@@ -12,7 +12,7 @@ https://websec.co.il/nobs
 A user creates a new note via the **POST** endpoint.  
 After that, the user calls the **report** endpoint with the ``id`` of the created note to retrieve its content.
 
-The server generates a string that contains the titles and IDs, where `title,id` are separated by a comma and each entry ends with `\n`.  
+The server generates a text that contains the titles and IDs, where `title,id` are separated by a comma and each entry ends with `\n`.  
 This result is then passed into the `deflateRaw` function, which performs compression.
 The compressed data is subsequently encrypted using AES, encoded in base64, and returned to the client.
 
@@ -75,7 +75,7 @@ This indicated a successful guess.
 However, sometimes all hexadecimal guesses produced the same response size.  
 This happens because of the **4-byte padding** that AES uses in this challenge.
 
-To overcome this, I prepended characters to the title:
+To overcome this, I prepended characters to the title (instead '?' you will put the first char of the gussed ``id``):
 
 - `"title,?"`
 - `"Atitle,?"`
