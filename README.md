@@ -10,7 +10,7 @@ https://websec.co.il/nobs
 ## Overview
 
 A user creates a new note via the **POST** endpoint.  
-After that, the user calls the **report** endpoint.
+After that, the user calls the **report** endpoint with the ``id`` of the created note to retrieve its content.
 
 The server generates a string that contains the titles and IDs, where `title,id` are separated by a comma and each entry ends with `\n`.  
 This result is then passed into the `deflateRaw` function, which performs compression.
